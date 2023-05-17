@@ -5,6 +5,7 @@
   padding: 0%;
   box-sizing: border-box;
   font-family: "Spartan", sans-serif;
+
 }
 
 h1 {
@@ -578,7 +579,7 @@ footer .copyright {
 		width: 270px;
 		height: 75vh;
 		background: #ffffff;
-		display: flex;
+		display: block;
 		flex-direction: column;
 		justify-content: flex-start;
 		border-radius: 10px;
