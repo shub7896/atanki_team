@@ -1,1 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <style>@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+        *{
+            margin: 0px;
+            padding: 0px;
+            /* box-sizing: border-box; */
+            font-family: 'Poppins', sans-serif;
+        }
+        .section{
+            width: 100%;
+            min-height: 100vh;
+            background-color: #ddd;
+        }
+        .container{
+            width: 80%;
+            display: block;
+            margin: auto;
+            padding-top: 100px;
+        }
+        .content-section{
+            float: left;
+            width: 55%;
+        }
+        
+        #ch:checked ~ .content1{
+            display: block;
+        }
+        
+        #ch:checked ~ label{
+            display: none;
+        }
+        .content1{
+            display: none;
+        }
+        .image-section{
+            float: right;
+            width: 40%;
+        }
+        .image-section img{
+            width: 70%;
+            height: auto;
+        }
+        .content-section .title{
+            text-transform: uppercase;
+            font-size: 28px;
+        }
+        #ch{
+            display: none;
+        }
+        
+        label{
+            display: inline-block;
+            cursor: pointer;
+            background-color: #3d3d3d;
+            padding: 12px 40px;
+            text-decoration: none;
+            color: #fff;
+            font-size: 25px;
+            letter-spacing: 1.5px;
+            margin-top: 30px;
+        }
+        
+        label:hover{
+            background-color: #a52a2a;
+            color: #fff;
+        }
+        .content-section .content h3{
+            margin-top: 20px;
+            color: #5d5d5d;
+            font-size: 21px;
+        }
+        .content-section .content p{
+            margin-top: 10px;
+            font-family: sans-serif;
+            font-size: 18px;
+            line-height: 1.5;
+        }
+        .content-section .content .button{
+            margin-top: 30px;
+        }
+        
+        .mv-container{
+            max-width: 90%;
+            margin: 50px auto 0;
+        }
+        .mv-container .mv-block{
+            margin-bottom: 50px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        .mv-container .mv-block .image{
+            flex: 0 0 auto;
+            width: 400px;
+            overflow: hidden;
+            border-radius: 5px;
+            box-shadow: 0 0 10px 5px rgba(0, 0, 0, .3);
+            line-height: 0;
+        }
+        .mv-container .mv-block .image img{
+            width: 100%;
+            transition: .3s;
+            transform: scale(1);
+        }
+        .mv-container .mv-block .image:hover img{
+            transform: scale(1.05);
+        }
+        
+        .mv-container .mv-block .content3{
+            flex: 0 0 auto;
+             width:calc(100% - 400px); 
+            box-sizing: border-box;
+            align-self: center;
+        }
+        .mv-container .mv-block .content3 h5{
+            font-weight: 700;
+            font-size: 22px;
+            color: blue;
+            margin-bottom: 10px;
+        }
+        .mv-container .mv-block .content3 p{
+            font-size: 15px;
+        }
+        
+        @media screen and (min-width: 1024px){
+            .mv-container .mv-block:nth-child(add) .image
+            {
+                order: 1;
+            }
+            .mv-container .mv-block:nth-child(even) .image
+            {
+                order: 2;
+            }
+        
+            .mv-container .mv-block:nth-child(add) .content3
+            {
+                order: 2;
+                padding-left: 30px;
+            }
+            .mv-container .mv-block:nth-child(even) .content3
+            {
+                order: 1;
+                padding-right: 30px;
+            }
+        }
+        .content-section .social{
+            margin-top: 40px;
+        }
+        .content-section .social i{
+            color: #a52a2a;
+            font-size: 30px;
+            padding: 0px 10px;
+        }
+        .content-section .social i:hover{
+            color: #3d3d3d;
+        }
+        @media screen and (max-width: 768px){
+            .container{
+                width: 80%;
+                display: block;
+                margin: auto;
+                padding-top: 50px;
+            }
+            .content-section{
+                float: none;
+                width: 100%;
+                display: block;
+                margin: auto;
+            }
+            .image-section{
+                float: none;
+                width: 100%;
+            }
+            .image-section img{
+                width: 100%;
+                height: auto;
+                display: block;
+                margin: auto;
+            }
+            .content-section .title{
+                text-align: center;
+                font-size: 19px;
+            }
+            .content-section .content .button{
+                text-align: center;
+            }
+            .content-section .content .button a{
+                padding: 9px 30px;
+            }
+            .content-section .social{
+                text-align: center;
+            }
+        }</style>
+    <title>About Us Section</title>
+</head>
+
+<body>
+    <div class="section">
+        <div class="container">
+            <div class="content-section">
+                <div class="title">
+                    <h1>About Us</h1>
+                </div>
+                <div class="content">
+                    <input id="ch" type="checkbox">
+                    <h3>Welcome to our E-commerce website.</h3>
+                    <p>where we offer a wide range of computers and computer accessories to meet your computing needs.
+                    </p>
+
+                    <div class="content1">
+                        <p>Our website has been designed with you, the customer, in mind, making it easy to navigate and
+                            find the products you need.
+                            At our store, you will find top-of-the-line computer brands, including Apple, Dell, HP,
+                            Lenovo, and more. We offer a variety of desktops, laptops, tablets, and gaming computers,
+                            with different specifications and configurations to fit your needs.<br>
+
+                            In addition to computers, we also offer a range of computer accessories, including monitors,
+                            keyboards, mice, printers, and scanners. We carry high-quality, reliable products that are
+                            designed to enhance your computing experience.<br>
+
+                            Our website is user-friendly and easy to use. You can easily search for products by brand,
+                            category, or keyword. We also offer a secure and safe checkout process, ensuring your
+                            personal and financial information is protected.<br>
+
+                            We take pride in our excellent customer service, and we are always available to answer any
+                            questions or concerns you may have. Our team of experts is available to help you select the
+                            best products for your needs and offer technical support if necessary.<br>
+
+                            We offer fast and efficient shipping, so you can receive your products as soon as possible.
+                            We also offer a hassle-free return policy, so if you're not satisfied with your purchase,
+                            we'll make it right.</p>
+
+                        <label for="ch">Show less</label>
+                    </div>
+
+                    <label for="ch">Read more</label>
+                </div>
+                <!-- <br><br><br> -->
+
+                <div class="mv-container">
+                    <div class="mv-block">
+                        <div class="image">
+                            <img src="https://www.shutterstock.com/image-photo/hand-interacting-our-mission-business-260nw-1078684292.jpg"
+                                alt="">
+                        </div>
+                        <div class="content3">
+                            <h5>Our Mission</h5>
+                            <p>We strive to offer our customers the lowest possible prices, the best available
+                                selection, and the utmost convenience. Vision statement: To be Earth's most
+                                customer-centric company, where customers can find and discover anything they might want
+                                to buy online.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="mv-block">
+                        <div class="image">
+                            <img src="https://www.viraj.com/wp-content/uploads/2021/11/vision-1.jpg" alt="">
+                        </div>
+                        <div class="content3">
+                            <h5>Our Vision</h5>
+                            <p>To be Earth's most customer-centric company, where customers can find and discover
+                                anything they might want to buy online.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="mv-block">
+                        <div class="image">
+                            <img src="https://www.shutterstock.com/image-illustration/our-values-yellow-light-bulb-260nw-337570034.jpg"
+                                alt="">
+                        </div>
+                        <div class="content3">
+                            <h5>Our Value</h5>
+                            <p>We work on Values of customer focus, innovation, integrity, collaboration, respect, quality, excellence.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="social">
+                    <a href=""><i class="fab fa-facebook-f"></i></a>
+                    <a href=""><i class="fab fa-twitter"></i></a>
+                    <a href=""><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <!-- <div class="image-section">
+                <img src="https://thumbs.dreamstime.com/z/gadgets-accessories-133429004.jpg">
+            </div> -->
+        </div>
+    </div>
+</body>
+
+</html>
