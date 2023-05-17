@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9f455fbf8a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+	<link rel="stylesheet"
+  href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+    <title>BLOG</title>
+    <style>
+        body {
+            background: rgb(34, 193, 195);
+            background: linear-gradient(150deg, rgba(34, 193, 195, 1) 15%, rgb(255, 254, 252) 15%);
+        }
+
+        #holder {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.8rem;
+        }
+
+        .blog-heading {
+            text-align: center;
+            margin-top: 0px;
+            margin-bottom: 30px;
+            font-family: 'Bree Serif', serif;
+
+        }
+
+        .blog-heading h1 {
+            font-size: 70px;
+            color: #333;
+            margin: 0px;
+        }
+
+        .blog-card img {
+            width: 100%;
+            border-radius: 5px;
+            margin-bottom: 10px;
+
+        }
+
+        .blog-card {
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .blog-card h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .blog-card p {
+            color: #666;
+        }
+
+        .blog-card a {
+            display: inline-block;
+            background-color: #333;
+            color: #fff;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .back-button {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .back-button button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .back-button button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="header">
+        <a href="#"><img src="./img/logo.png" width="7%" class="logo" alt=""></a>
+        <div>
+            <ul class="navbar">
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="cart.html" class="user"><i class="fa-sharp fa-solid fa-cart-shopping"></i></a> </li>
+                <li><a href="#" class="user"><i class="ri-user-fill"></i></a></li>
+			    <li><a href="#" class="user"><i class="fa-solid fa-user-plus"></i></a></li>
+            </ul>
+        </div>
+    
+		
+        <div class="bx bx-menu" id="menu-icon"></div>
+    </section>
+    <div class="blog-heading">
+        <h1>BLOG</h1>
+    </div>
+    <section id="holder">
+
+        <div class="blog-card">
+            <h2>Embracing Remote Collaboration and Hybrid Work Models</h2>
+            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                alt="Image 1">
+            <p>As technology evolves, remote collaboration tools and hybrid work models are reshaping the way we work,
+                allowing for flexibility, productivity, and global connectivity.</p>
+            <a href="#">Read More</a>
+        </div>
+        <div class="blog-card">
+            <h2>The Impact of Mobile Shopping on Retail and Consumer Behavior</h2>
+            <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                alt="Image 1">
+            <p>Mobile shopping is revolutionizing the retail industry, influencing consumer behavior, and reshaping the
+                way businesses engage with customers in the digital age.</p>
+            <a href="#">Read More</a>
+        </div>
+        <div class="blog-card">
+            <h2>The Role of Artificial Intelligence in Healthcare</h2>
+            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                alt="Image 1">
+            <p>Artificial intelligence is revolutionizing healthcare, empowering doctors with advanced diagnostic tools
+                and personalized treatment options, ultimately improving patient outcomes.</p>
+            <a href="#">Read More</a>
+        </div>
+        <div class="blog-card">
+            <h2>The Future of Transportation</h2>
+            <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                alt="Image 1">
+            <p>Electric vehicles and sustainable mobility solutions are driving a transformative shift in
+                transportation, reducing carbon emissions and paving the way for a greener future.</p>
+            <a href="#">Read More</a>
+        </div>
+        <div class="blog-card">
+            <h2>The Evolution of Gaming</h2>
+            <img src="https://images.unsplash.com/photo-1504639725590-34d0984388bd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
+                alt="Image 1">
+            <p>Gaming is evolving rapidly, with advancements in cloud gaming and virtual reality technology providing
+                immersive experiences and redefining the boundaries of interactive entertainment.</p>
+            <a href="#">Read More</a>
+        </div>
+        <div class="blog-card">
+            <h2>The Impact of Social Media on Society</h2>
+            <img src="https://plus.unsplash.com/premium_photo-1671439429636-6d8d66247143?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1157&q=80"
+                alt="Image 1">
+            <p>Social media has revolutionized communication, connecting people across the globe, but it also presents
+                challenges such as privacy concerns and the spread of misinformation.</p>
+            <a href="#">Read More</a>
+        </div>
+        <div class="blog-card">
+            <h2>Data Privacy in the Digital Age</h2>
+            <img src="https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80"
+                alt="Image 1">
+            <p>As our lives become increasingly digital, the protection of personal data is crucial. Striking a balance
+                between convenience and security is essential for preserving privacy.</p>
+            <a href="#">Read More</a>
+        </div>
+        <div class="blog-card">
+            <h2>The Future of Renewable Energy</h2>
+            <img src="https://images.unsplash.com/photo-1498049860654-af1a5c566876?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                alt="Image 1">
+            <p>Renewable energy sources such as solar and wind power are leading the way to a sustainable future,
+                reducing dependence on fossil fuels and combating climate change.</p>
+            <a href="#">Read More</a>
+        </div>
+        <div class="blog-card">
+            <h2>The Internet of Things (IoT)</h2>
+            <img src="https://images.unsplash.com/photo-1512756290469-ec264b7fbf87?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1053&q=80"
+                alt="Image 1">
+            <p>The Internet of Things enables seamless connectivity between devices, transforming homes into smart
+                spaces where automation and convenience enhance our daily lives..</p>
+            <a href="#">Read More</a>
+
+    </section>
+    </div>
+    <div class="back-button">
+        <button onclick="goBack()">Go Back</button>
+    </div>
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="./img/logo.png" width="7%" alt="">
+            <h4>Contact</h4>
+            <p> <strong> Address:</strong> Renaissance Industrial Smart City, Kalyan-Sape Rd</p>
+            <p> <strong> Phone:</strong> +91 1234567890</p>
+            <p> <strong> Hours:</strong>10:00 - 18:00 MON - SAT </p>
+            <div class="follow">
+                <h4>Follow Us</h4>
+                <div class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-youtube"></i>
+                    <i class="fab fa-pinterest-p"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">About US</a>
+            <a href="#">Contact US</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Delivery Information</a>
+        </div>
+
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign In</a>
+            <a href="#">View Cart</a>
+            <a href="#">My Wishlist</a>
+            <a href="#">Track My Order</a>
+            <a href="#">Help</a>
+        </div>
+
+        <div class="col install">
+            <h4>Install App</h4>
+            <p>From App Store or Google Play</p>
+            <div class="row">
+                <img src="./img/pay/play.jpg" alt="">
+                <img src="./img/pay/app.jpg" alt="">
+
+            </div>
+            <p>Secured Payment Gateways</p>
+            <img src="./img/pay/pay.png" alt="">
+        </div>
+        <div class="copyright">
+            <p>
+                ©1900-2021, All Rights Reserved. by Me
+            </p>
+        </div>
+
+    <script>
+        // Function to go back to the home page
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+
+</html>
