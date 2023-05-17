@@ -580,7 +580,6 @@ footer .copyright {
 		height: 75vh;
 		background: #ffffff;
 	        overflow-x: hidden;
-		display: none;
 		flex-direction: column;
 		justify-content: flex-start;
 		border-radius: 10px;
