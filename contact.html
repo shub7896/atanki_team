@@ -10,14 +10,7 @@
     <script src="https://kit.fontawesome.com/9f455fbf8a.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./style.css">
 
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-
-	<link rel="stylesheet"
-  href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+    
     <style>
     @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
 
@@ -341,7 +334,7 @@ textarea.input {
   opacity: 0.2;
 }
 
-@media (max-width: 850px) {
+@media (max-width: 720px) {
   .form {
     grid-template-columns: 1fr;
   }
@@ -379,7 +372,7 @@ textarea.input {
   }
 }
 
-@media (max-width: 720px) {
+@media (max-width: 480px) {
   .container {
     padding: 1.5rem;
   }
@@ -435,26 +428,28 @@ textarea.input {
   </head>
   <body>
     <section id="header">
-        <a href="#"><img src="./img/logo.png" width="7%" class="logo" alt=""></a>
-        <div>
-            <ul class="navbar">
-                <li><a class="active" href="index.html">Home</a></li>
-                <li><a href="shop.html">Shop</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="cart.html" class="user"><i class="fa-sharp fa-solid fa-cart-shopping"></i></a> </li>
-                <li><a href="#" class="user"><i class="ri-user-fill"></i></a></li>
-			    <li><a href="#" class="user"><i class="fa-solid fa-user-plus"></i></a></li>
-            </ul>
-        </div>
-    
-		
-        <div class="bx bx-menu" id="menu-icon"></div>
-    </section>
-	     <div class="container">
+      <a href="#"><img src="./img/logo.png" width="7%" class="logo" alt=""></a>
+      <div>
+          <ul id="navbar">
+              <li><a class="active" href="index.html">Home</a></li>
+              <li><a href="shop.html">Shop</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a class="active" href="contact.html">Contact</a></li>
+              <li><a href="login.html">Login</a></li>
+              <li><a href="cart.html"><i class="fa-sharp fa-solid fa-cart-shopping"></i></a> </li>
+              <a href="#" id="close"><i class="far fa-times"></i></a>
+          </ul>
+      </div>
+
+      <div id="mobile">
+          <a href="card.html"><i class="fa-sharp fa-solid fa-cart-shopping"></i></a>
+          <i id="bar" class="fas fa-outdent"></i>
+      </div>
+  </section>
+
+    <div class="container">
      
-      <div="container">
       <img src="images/shape.png" class="square" alt="" />
       <div class="form">
         <div class="contact-info">
@@ -582,6 +577,7 @@ textarea.input {
                 ©1900-2021, All Rights Reserved. by Me
             </p>
         </div>
+        <script src=" ./main.js"></script>
     <script>const inputs = document.querySelectorAll(".input");
 
       function focusFunc() {

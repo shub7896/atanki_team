@@ -5,204 +5,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
-    <style>@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
-        *{
-            margin: 0px;
-            padding: 0px;
-            /* box-sizing: border-box; */
-            font-family: 'Poppins', sans-serif;
-        }
-        .section{
-            width: 100%;
-            min-height: 100vh;
-            background-color: #ddd;
-        }
-        .container{
-            width: 80%;
-            display: block;
-            margin: auto;
-            padding-top: 100px;
-        }
-        .content-section{
-            float: left;
-            width: 55%;
-        }
-        
-        #ch:checked ~ .content1{
-            display: block;
-        }
-        
-        #ch:checked ~ label{
-            display: none;
-        }
-        .content1{
-            display: none;
-        }
-        .image-section{
-            float: right;
-            width: 40%;
-        }
-        .image-section img{
-            width: 70%;
-            height: auto;
-        }
-        .content-section .title{
-            text-transform: uppercase;
-            font-size: 28px;
-        }
-        #ch{
-            display: none;
-        }
-        
-        label{
-            display: inline-block;
-            cursor: pointer;
-            background-color: #3d3d3d;
-            padding: 12px 40px;
-            text-decoration: none;
-            color: #fff;
-            font-size: 25px;
-            letter-spacing: 1.5px;
-            margin-top: 30px;
-        }
-        
-        label:hover{
-            background-color: #a52a2a;
-            color: #fff;
-        }
-        .content-section .content h3{
-            margin-top: 20px;
-            color: #5d5d5d;
-            font-size: 21px;
-        }
-        .content-section .content p{
-            margin-top: 10px;
-            font-family: sans-serif;
-            font-size: 18px;
-            line-height: 1.5;
-        }
-        .content-section .content .button{
-            margin-top: 30px;
-        }
-        
-        .mv-container{
-            max-width: 90%;
-            margin: 50px auto 0;
-        }
-        .mv-container .mv-block{
-            margin-bottom: 50px;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-        }
-        .mv-container .mv-block .image{
-            flex: 0 0 auto;
-            width: 400px;
-            overflow: hidden;
-            border-radius: 5px;
-            box-shadow: 0 0 10px 5px rgba(0, 0, 0, .3);
-            line-height: 0;
-        }
-        .mv-container .mv-block .image img{
-            width: 100%;
-            transition: .3s;
-            transform: scale(1);
-        }
-        .mv-container .mv-block .image:hover img{
-            transform: scale(1.05);
-        }
-        
-        .mv-container .mv-block .content3{
-            flex: 0 0 auto;
-             width:calc(100% - 400px); 
-            box-sizing: border-box;
-            align-self: center;
-        }
-        .mv-container .mv-block .content3 h5{
-            font-weight: 700;
-            font-size: 22px;
-            color: blue;
-            margin-bottom: 10px;
-        }
-        .mv-container .mv-block .content3 p{
-            font-size: 15px;
-        }
-        
-        @media screen and (min-width: 1024px){
-            .mv-container .mv-block:nth-child(add) .image
-            {
-                order: 1;
-            }
-            .mv-container .mv-block:nth-child(even) .image
-            {
-                order: 2;
-            }
-        
-            .mv-container .mv-block:nth-child(add) .content3
-            {
-                order: 2;
-                padding-left: 30px;
-            }
-            .mv-container .mv-block:nth-child(even) .content3
-            {
-                order: 1;
-                padding-right: 30px;
-            }
-        }
-        .content-section .social{
-            margin-top: 40px;
-        }
-        .content-section .social i{
-            color: #a52a2a;
-            font-size: 30px;
-            padding: 0px 10px;
-        }
-        .content-section .social i:hover{
-            color: #3d3d3d;
-        }
-        @media screen and (max-width: 768px){
-            .container{
-                width: 80%;
-                display: block;
-                margin: auto;
-                padding-top: 50px;
-            }
-            .content-section{
-                float: none;
-                width: 100%;
-                display: block;
-                margin: auto;
-            }
-            .image-section{
-                float: none;
-                width: 100%;
-            }
-            .image-section img{
-                width: 100%;
-                height: auto;
-                display: block;
-                margin: auto;
-            }
-            .content-section .title{
-                text-align: center;
-                font-size: 19px;
-            }
-            .content-section .content .button{
-                text-align: center;
-            }
-            .content-section .content .button a{
-                padding: 9px 30px;
-            }
-            .content-section .social{
-                text-align: center;
-            }
-        }</style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9f455fbf8a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style.css">
     <title>About Us Section</title>
+    <script>
+        
+    </script>
 </head>
 
 <body>
+    <section id="header">
+        <a href="#"><img src="./img/logo.png" width="7%" class="logo" alt=""></a>
+        <div>
+            <ul id="navbar">
+                <li><a  href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a class="active" href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+				<li><a href="login.html">login</a></li>
+                <li><a  href="cart.html"><i class="fa-sharp fa-solid fa-cart-shopping"></i></a> </li>
+                <a href="#" id="close"><i class="far fa-times"></i></a>
+            </ul>
+        </div>
+
+        <div id="mobile">
+            <a href="card.html"><i class="fa-sharp fa-solid fa-cart-shopping"></i></a>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>
+    </section>
     <div class="section">
         <div class="container">
             <div class="content-section">
@@ -297,6 +131,62 @@
             </div> -->
         </div>
     </div>
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="./img/logo.png" width="7%" alt="">
+            <h4>Contact</h4>
+            <p> <strong> Address:</strong> Renaissance Industrial Smart City, Kalyan-Sape Rd</p>
+            <p> <strong> Phone:</strong> +91 1234567890</p>
+            <p> <strong> Hours:</strong>10:00 - 18:00 MON - SAT </p>
+            <div class="follow">
+                <h4>Follow Us</h4>
+                <div class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-youtube"></i>
+                    <i class="fab fa-pinterest-p"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">About US</a>
+            <a href="#">Contact US</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Delivery Information</a>
+        </div>
+
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign In</a>
+            <a href="#">View Cart</a>
+            <a href="#">My Wishlist</a>
+            <a href="#">Track My Order</a>
+            <a href="#">Help</a>
+        </div>
+
+        <div class="col install">
+            <h4>Install App</h4>
+            <p>From App Store or Google Play</p>
+            <div class="row">
+                <img src="./img/pay/play.jpg" alt="">
+                <img src="./img/pay/app.jpg" alt="">
+
+            </div>
+            <p>Secured Payment Gateways</p>
+            <img src="./img/pay/pay.png" alt="">
+        </div>
+        <div class="copyright">
+            <p>
+                ©1900-2021, All Rights Reserved. by Me
+            </p>
+        </div>
+
+
+    </footer>
 </body>
 
 </html>

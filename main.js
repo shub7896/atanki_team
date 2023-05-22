@@ -1,7 +1,14 @@
-let menu = document.querySelector('#menu-icon');
-let navbar = document.querySelector('.navbar');
+const bar = document.getElementById('bar');
+const close = document.getElementById('close');
+const nav = document.getElementById('navbar');
 
-menu.onclick = () => {
-	menu.classList.toggle('bx-x');
-	navbar.classList.toggle('open');
+if (bar) {
+	bar.addEventListener('click', () => {
+		nav.classList.add('active')
+	})
+}
+if (close) {
+	close.addEventListener('click', () => {
+		nav.classList.remove('active')
+	})
 }
