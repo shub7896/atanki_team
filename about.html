@@ -10,439 +10,544 @@
     <script src="https://kit.fontawesome.com/a386cc10f6.js" crossorigin="anonymous"></script>
 </head>
 
-    <style>
-        *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'poppins', sans-serif;
-}
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'poppins', sans-serif;
+    }
 
-body{
-    background: linear-gradient(150deg, #fcf2f2 19%, rgba(255, 255, 255, 1) 19%);
-}
+    body {
+        background-color: #FFF;
+    }
 
     /* HEADER SECTION  */
 
-#about-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 80px;
-    box-shadow: 0 9px 15px rgba(0, 0, 0, 0.07);
-    background: #ece8e5;
-    z-index: 999;
-    position: sticky;
-    top: 0;
-    left: 0;
-  }
-
-  #about-navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  #about-navbar li {
-    list-style: none;
-    padding: 0 20px;
-    position: relative;
-  }
-  
-  #about-navbar li a {
-    text-decoration: none;
-    color: #1a1a1a;
-    font-size: 16px;
-    font-weight: 600;
-    transition: all 0.3s ease-in-out;
-  }
-  
-  #about-navbar li a:hover,
-  #about-navbar li a.active {
-    color: #088178;
-  }
-  
-  #about-navbar li a.active::after,
-  #about-navbar li a:hover::after {
-    content: "";
-    width: 30%;
-    height: 2px;
-    background: #088178;
-    position: absolute;
-    bottom: -4px;
-    left: 20px;
-  }
-
-
-      /* ABOUT SECTION  */
-
-.about-Main{
-    width: 100%;
-    height: 35vh;
-    position: relative;
-    padding: 0 5%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.about-content:after{
-    content: '';
-    background: #333;
-    display: block;
-    height: 3px;
-    width: 300px;
-    margin: 10px auto;
-}
-
-.about-content{
-    text-align: center;
-}
-
-.about-content h1{
-    font-size: 100px;
-    font-weight: 400;
-    transition: 0.5s;
-}
-
-.about-content h1:hover{
-    -webkit-text-stroke: 2px rgb(0, 0, 0);
-    color: transparent;
-}
-
-.bg{
-    background: linear-gradient(150deg, rgba(236, 232, 229, 1) 19%, rgba(255, 255, 255, 1) 19%);
-}
-.aboutus{
-    text-align: center;
-    font-size: 50px;
-}
-
-.about-intro{
-    padding: 40px;
-    text-align: center;
-    font-size: 23px;
-    font-style: italic;
-    font-weight: bold;
-}
-
-      /* BOX SECTION  */
-
-.box{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    height: auto;
-    text-align: center;
-}
-.mvva{
-    height: 250px;
-    width: 650px;
-    color: black;
-    font-size: 25px;
-    border-radius: 10px;
-    margin: 35px;
-    margin-top: 30px;
-    border-style: inset;
-    border-width: 10px;
-    border-color: gray;
-}
-
-.mvva h3{
-    text-align: center;
-    font-size: 40px;
-    margin-top: 8px;
-}
-
-.mvva p{
-    text-align: center;
-    margin: 15px;
-}
-
-.team{
-    margin: 75px 0;
-}
-
-.team h1{
-    text-align: center;
-    font-weight: bold;
-    font-size: 50px;
-    letter-spacing: 1px;
-    color: #333;
-    padding-bottom: 10px;
-}
-
-.team:after{
-    content: '';
-    background: #333;
-    display: block;
-    height: 3px;
-    width: 150px;
-    margin: 10px auto;
-}
-
-      /* SLIDER SECTION  */
-
-
-.member-slide{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #fff;
-    position: relative;
-  }
-  .member-slide::before{
-    content: '';
-    position: absolute;
-    width: 100%;
-    background: #FF676D;
-    clip-path: inset(47% 0 0 0);
-    z-index: -1;
-    height: 100%;
-  }
-  ::selection{
-    background: #FF676D;
-    color: #fff;
-  }
-  .member-container{
-    max-width: 100%;
-    width: 100%;
-    overflow: hidden;
-  }
-  .member-container .main-card{
-    display: flex;
-    justify-content: space-evenly;
-    width: 200%;
-    transition: 1s;
-  }
-  #two:checked ~ .main-card{
-    margin-left: -100%;
-  }
-  .member-container .main-card .cards{
-    width: calc(100% / 2 - 10px);
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 20px;
-    justify-content: space-between;
-  }
-  .main-card .cards .card{
-    width: calc(100% / 3 - 10px);
-    background: #fff;
-    border-radius: 12px;
-    padding: 30px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
-    transition: all 0.4s ease;
-  }
-  .main-card .cards .card:hover{
-    transform: translateY(-15px);
-  }
-  .cards .card .content{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-  .cards .card .content .img{
-    height: 130px;
-    width: 130px;
-    border-radius: 50%;
-    padding: 3px;
-    background: #FF676D;
-    margin-bottom: 14px;
-  }
-  .card .content .img img{
-    height: 100%;
-    width: 100%;
-    border: 3px solid #ffff;
-    border-radius: 50%;
-    object-fit: cover;
-  }
-  .card .content .name{
-    font-size: 20px;
-    font-weight: 500;
-  }
-  .card .content .job{
-    font-size: 20px;
-    color: #FF676D;
-  }
-  .card .content .media-icons{
-    margin-top: 10px;
-    display: flex;
-  
-  }
-  .media-icons a{
-    text-align: center;
-    line-height: 33px;
-    height: 35px;
-    width: 35px;
-    margin: 0 4px;
-    font-size: 14px;
-    color: #FFF;
-    border-radius: 50%;
-    border: 2px solid transparent;
-    background: #FF676D;
-    transition: all 0.3s ease;
-  }
-  .media-icons a:hover{
-    color: #FF676D;
-    background-color: #fff;
-    border-color: #FF676D;
-  }
-   .container .button{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin: 20px;
-  }
-  .button label{
-    height: 15px;
-    width: 15px;
-    border-radius: 20px;
-    background: red;
-    margin: 0 4px;
-    cursor: pointer;
-    transition: all 0.5s ease;
-  }
-  .button label.active{
-    width: 35px;
-  }
-  #one:checked ~ .button .one{
-    width: 35px;
-  }
-  #one:checked ~ .button .two{
-    width: 15px;
-  }
-  #two:checked ~ .button .one{
-    width: 15px;
-  }
-  #two:checked ~ .button .two{
-    width: 35px;
-  }
-  input[type="radio"]{
-    display: none;
-  }
-  @media (max-width: 768px) {
-    .main-card .cards .card{
-      margin: 20px 0 10px 0;
-      width: calc(100% / 2 - 10px);
+    #about-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 80px;
+        box-shadow: 0 9px 15px rgba(0, 0, 0, 0.07);
+        background: #ece8e5;
+        z-index: 999;
+        position: sticky;
+        top: 0;
+        left: 0;
     }
-  }
-  @media (max-width: 600px) {
-    .main-card .cards .card{
-      width: 100%;
+
+    #about-header img{
+        width: 70%;
+        border-radius: 10px;
     }
-  }
 
-      /* LAST SECTION  */
+    #about-navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 
-.last{
-    margin-top: 5rem;
-    background-color: rgb(236, 232, 229);
-}
-.last-box{
-    height: 50%;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    height: auto;
-    background-color: rgb(236, 232, 229);
-}
+    #about-navbar li {
+        list-style: none;
+        padding: 0 20px;
+        position: relative;
+    }
 
-.contact{
-    background-color: rgb(236, 232, 229);
-    margin-top: 30px;
-    margin-left: 13%;
-}
+    #about-navbar li a {
+        text-decoration: none;
+        color: #1a1a1a;
+        font-size: 16px;
+        font-weight: 600;
+        transition: all 0.3s ease-in-out;
+    }
 
-.contact h3{
-    font-size: 50px;
-    padding-left: 14%;
-    color: black;
-}
+    #about-navbar li a:hover,
+    #about-navbar li a.active {
+        color: #088178;
+    }
 
-.contact i{
-    margin-top: 10px;
-    color: black;
-}
+    #about-navbar li a.active::after,
+    #about-navbar li a:hover::after {
+        content: "";
+        width: 30%;
+        height: 2px;
+        background: #088178;
+        position: absolute;
+        bottom: -4px;
+        left: 20px;
+    }
 
-.map{
-    margin-top: 30px;
-    margin-right: 50px;
-}
 
-.footer{
-    font-size: 20px;
-    text-align: center;
-    margin-top: 30px;
-}
-    </style>
+    /* ABOUT SECTION  */
+
+    .about-Main {
+        width: 100%;
+        height: 35vh;
+        position: relative;
+        padding: 0 5%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .about-Main img {
+        width: 100%;
+        height: 80%;
+        opacity: 0.2;
+    }
+
+    .about-content:after {
+        content: '';
+        background: #333;
+        display: block;
+        height: 3px;
+        width: 300px;
+        margin: 10px auto;
+    }
+
+    #page-header {
+        background-image: url("banner.png");
+        width: 100%;
+        height: 40vh;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+        padding: 14px;
+    }
+
+    #page-header h2 {
+        font-size: 100px;
+        font-weight: 400;
+    }
+
+    #page-header h2,
+    #page-header p {
+        color: white;
+    }
+
+
+    #page-header h2,
+    #page-header p {
+        color: white;
+    }
+
+    .about-intro {
+        padding: 40px;
+        text-align: center;
+        font-size: 23px;
+        display: flex;
+        align-items: center;
+    }
+
+    .about-intro img {
+        width: 40%;
+        height: auto;
+        margin: 10px 5px 0 5px;
+        border-radius: 10px;
+    }
+
+    /* BOX SECTION  */
+
+    .box {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: auto;
+        text-align: center;
+    }
+
+    .mvva {
+        height: 250px;
+        width: 650px;
+        color: black;
+        font-size: 25px;
+        border-radius: 10px;
+        margin: 35px;
+        margin-top: 30px;
+        border-style: inset;
+        border-width: 10px;
+        border-color: gray;
+        background: linear-gradient(150deg, rgb(255, 251, 247), white);
+    }
+
+    .mvva h3 {
+        text-align: center;
+        font-size: 40px;
+        margin-top: 8px;
+        text-decoration: underline;
+    }
+
+    .mvva p {
+        text-align: center;
+        margin: 15px;
+    }
+
+    .team {
+        margin: 75px 0;
+    }
+
+    .team h1 {
+        text-align: center;
+        font-weight: bold;
+        font-size: 50px;
+        letter-spacing: 1px;
+        color: #333;
+        padding-bottom: 10px;
+    }
+
+    .team:after {
+        content: '';
+        background: #333;
+        display: block;
+        height: 3px;
+        width: 150px;
+        margin: 10px auto;
+    }
+
+    /* SLIDER SECTION  */
+
+
+    .member-slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #fff;
+        position: relative;
+    }
+
+    .member-slide::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        background: #FF676D;
+        clip-path: inset(47% 0 0 0);
+        z-index: -1;
+        height: 100%;
+    }
+
+    ::selection {
+        background: #FF676D;
+        color: #fff;
+    }
+
+    .member-container {
+        max-width: 100%;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .member-container .main-card {
+        display: flex;
+        justify-content: space-evenly;
+        width: 200%;
+        transition: 1s;
+    }
+
+    #two:checked~.main-card {
+        margin-left: -100%;
+    }
+
+    .member-container .main-card .cards {
+        width: calc(100% / 2 - 10px);
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 20px;
+        justify-content: space-between;
+    }
+
+    .main-card .cards .card {
+        width: calc(100% / 3 - 10px);
+        background: #fff;
+        border-radius: 12px;
+        padding: 30px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+        transition: all 0.4s ease;
+    }
+
+    .main-card .cards .card:hover {
+        transform: translateY(-15px);
+    }
+
+    .cards .card .content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .cards .card .content .img {
+        height: 130px;
+        width: 130px;
+        border-radius: 50%;
+        padding: 3px;
+        background: #FF676D;
+        margin-bottom: 14px;
+    }
+
+    .card .content .img img {
+        height: 100%;
+        width: 100%;
+        border: 3px solid #ffff;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .card .content .name {
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+    .card .content .job {
+        font-size: 20px;
+        color: #FF676D;
+    }
+
+    .card .content .media-icons {
+        margin-top: 10px;
+        display: flex;
+
+    }
+
+    .media-icons a {
+        text-align: center;
+        line-height: 33px;
+        height: 35px;
+        width: 35px;
+        margin: 0 4px;
+        font-size: 14px;
+        color: #FFF;
+        border-radius: 50%;
+        border: 2px solid transparent;
+        background: #FF676D;
+        transition: all 0.3s ease;
+    }
+
+    .media-icons a:hover {
+        color: #FF676D;
+        background-color: #fff;
+        border-color: #FF676D;
+    }
+
+    .member-container .button {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin: 20px;
+    }
+
+    .button label {
+        height: 15px;
+        width: 15px;
+        border-radius: 20px;
+        background: #FF676D;
+        margin: 0 4px;
+        cursor: pointer;
+        transition: all 0.5s ease;
+    }
+
+    .button label.active {
+        width: 35px;
+    }
+
+    #one:checked~.button .one {
+        width: 35px;
+    }
+
+    #one:checked~.button .two {
+        width: 15px;
+    }
+
+    #two:checked~.button .one {
+        width: 15px;
+    }
+
+    #two:checked~.button .two {
+        width: 35px;
+    }
+
+    input[type="radio"] {
+        display: none;
+    }
+
+    @media (max-width: 768px) {
+        .main-card .cards .card {
+            margin: 20px 0 10px 0;
+            width: calc(100% / 2 - 10px);
+        }
+    }
+
+    @media (max-width: 600px) {
+        .main-card .cards .card {
+            width: 100%;
+        }
+    }
+
+    /* LAST SECTION  */
+
+    .last {
+        margin-top: 5rem;
+        background-color: rgb(236, 232, 229);
+    }
+
+    .last-box {
+        height: 50%;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: auto;
+        background-color: rgb(236, 232, 229);
+    }
+
+    .contact {
+        background-color: rgb(236, 232, 229);
+        margin-top: 30px;
+        margin-left: 13%;
+    }
+
+    .contact h3 {
+        font-size: 50px;
+        padding-left: 14%;
+        color: black;
+    }
+
+    .contact i {
+        margin-top: 10px;
+        color: black;
+    }
+
+    .map {
+        margin-top: 30px;
+        margin-right: 50px;
+    }
+
+    .footer {
+        font-size: 20px;
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    /* ---------------------------------------------------------- */
+
+    footer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 40px;
+    }
+
+    footer .col {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 20px;
+        width: 20%;
+    }
+
+    footer .logo {
+        margin-bottom: 30px;
+    }
+
+    footer h4 {
+        font-size: 14px;
+        padding-bottom: 20px;
+    }
+
+    footer p {
+        font-size: 13px;
+        margin: 0px 0px 8px 0px;
+    }
+
+    footer a {
+        font-size: 13px;
+        text-decoration: none;
+        color: #222;
+        margin-bottom: 10px;
+    }
+
+    footer .follow {
+        margin-top: 20px;
+    }
+
+    footer .follow i {
+        color: #465b53;
+        padding-right: 4px;
+        cursor: pointer;
+    }
+
+    footer .install .row img {
+        border: 1px solid #088178;
+        border-radius: 6px;
+    }
+
+    footer .install img {
+        margin: 10px 0 15px 0;
+    }
+
+    footer .follow i:hover,
+    footer a:hover {
+        color: #088178;
+    }
+
+    footer .copyright {
+        width: 100%;
+        text-align: center;
+    }
+</style>
+
 <body>
 
     <!-- HEADER SECTION -->
 
     <section id="about-header">
-        <a href="#"><img src="/img/logo.png" width="7%" class="logo" alt=""></a>
+        <a href="#"><img src="mainlogo.png" width="7%" class="logo" alt=""></a>
         <div>
             <ul id="about-navbar">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="shop.html">Shop</a></li>
                 <li><a href="blog.html">Blog</a></li>
-                <li><a class="active" href="about.html">About</a></li>
+                <li><a class="active" href="aboutus.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="login.html">Login</a></li>
-                <li><a href="cart.html"><i class="fa-sharp fa-solid fa-cart-shopping"></i></a> </li>
+                <li><a href="card.html"><i class="fa-sharp fa-solid fa-cart-shopping"></i></a> </li>
             </ul>
         </div>
     </section>
 
-<!-- ----------------------------------------------------------------------------------------------------- -->
+    <!-- ----------------------------------------------------------------------------------------------------- -->
     <!-- ABOUT US SECTION -->
 
     <section class="bg">
-        <div class="about-Main">
-            <div class="about-content">
-                <h1>About Us</h1>
+        <section id="page-header">
+            <h2>About Us</h2>
+            <p>Welcome to our E-commerce website.</p>
+        </section>
+
+        <div class="about-intro">
+            <img src="aboutintro.avif" alt="">
+            <div>
+                <p>we offer a wide range of computers and computer accessories to meet your computing needs. Our website has
+                    been designed with you, the customer, in mind, making it easy to navigate and find the products you
+                    need.
+                    Our website is user-friendly and easy to use. You can easily search for products by brand, category, or
+                    keyword. We also offer a secure and safe checkout process, ensuring your personal and financial
+                    information is protected.
+                    We take pride in our excellent customer service, and we are always available to answer any questions or
+                    concerns you may have. Our team of experts is available to help you select the best products for your
+                    needs and offer technical support if necessary.
+                    We offer fast and efficient shipping, so you can receive your products as soon as possible. We also
+                    offer a hassle-free return policy, so if you're not satisfied with your purchase, we'll make it right.
+                </p>
             </div>
         </div>
 
-        <div class="aboutus">
-            <h3>Welcome to our E-commerce website.</h3>
-        </div>
 
-        <div class="about-intro">
-            <p>we offer a wide range of computers and computer accessories to meet your computing needs. Our website has
-                been designed with you, the customer, in mind, making it easy to navigate and find the products you
-                need.
-                At our store, you will find top-of-the-line computer brands, including Apple, Dell, HP, Lenovo, and
-                more. We
-                offer a variety of desktops, laptops, tablets, and gaming computers, with different specifications and
-                configurations to fit your needs.
-                In addition to computers, we also offer a range of computer accessories, including monitors, keyboards,
-                mice, printers, and scanners. We carry high-quality, reliable products that are designed to enhance your
-                computing experience.
-                Our website is user-friendly and easy to use. You can easily search for products by brand, category, or
-                keyword. We also offer a secure and safe checkout process, ensuring your personal and financial
-                information
-                is protected.
-                We take pride in our excellent customer service, and we are always available to answer any questions or
-                concerns you may have. Our team of experts is available to help you select the best products for your
-                needs
-                and offer technical support if necessary.
-                We offer fast and efficient shipping, so you can receive your products as soon as possible. We also
-                offer a
-                hassle-free return policy, so if you're not satisfied with your purchase, we'll make it right.
-                E-commerce
-                website for your computer needs. We look forward to serving you and helping you find the perfect
-                computer
-                products to fit your needs.</p>
-        </div>
+        <!-- ----------------------------------------------------------------------------------------------------- -->
 
-
-<!-- ----------------------------------------------------------------------------------------------------- -->
-
-    <!-- MVVA SECTION -->
+        <!-- MVVA SECTION -->
 
         <div class="box">
             <div class="mvva">
@@ -479,135 +584,135 @@ body{
             </div>
         </section>
 
- <!-- -------------------------------------------------------------------------------------------- -->
+        <!-- -------------------------------------------------------------------------------------------- -->
 
-    <!-- SLIDER SECTION -->
+        <!-- SLIDER SECTION -->
 
         <section class="member-slide">
-        <div class="member-container">
-            <input type="radio" name="dot" id="one">
-            <input type="radio" name="dot" id="two">
-            <div class="main-card">
-                <div class="cards">
-                    <div class="card">
-                        <div class="content">
-                            <div class="img">
-                                <img src="images/img1.jpg" alt="">
+            <div class="member-container">
+                <input type="radio" name="dot" id="one">
+                <input type="radio" name="dot" id="two">
+                <div class="main-card">
+                    <div class="cards">
+                        <div class="card">
+                            <div class="content">
+                                <div class="img">
+                                    <img src="images/img1.jpg" alt="">
+                                </div>
+                                <div class="details">
+                                    <div class="name">Subham</div>
+                                    <div class="job">Head</div>
+                                </div>
+                                <div class="media-icons">
+                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                    <a href="#"><i class="fab fa-youtube"></i></a>
+                                </div>
                             </div>
-                            <div class="details">
-                                <div class="name">Subham</div>
-                                <div class="job">Head</div>
+                        </div>
+                        <div class="card">
+                            <div class="content">
+                                <div class="img">
+                                    <img src="images/img2.jpg" alt="">
+                                </div>
+                                <div class="details">
+                                    <div class="name">Arin</div>
+                                    <div class="job">Manager</div>
+                                </div>
+                                <div class="media-icons">
+                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                    <a href="#"><i class="fab fa-youtube"></i></a>
+                                </div>
                             </div>
-                            <div class="media-icons">
-                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="fab fa-instagram"></i></a>
-                                <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                        <div class="card">
+                            <div class="content">
+                                <div class="img">
+                                    <img src="images/img3.jpg" alt="">
+                                </div>
+                                <div class="details">
+                                    <div class="name">Monu</div>
+                                    <div class="job">Senior Team Leader</div>
+                                </div>
+                                <div class="media-icons">
+                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                    <a href="#"><i class="fab fa-youtube"></i></a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="card">
-                        <div class="content">
-                            <div class="img">
-                                <img src="images/img2.jpg" alt="">
-                            </div>
-                            <div class="details">
-                                <div class="name">Arin</div>
-                                <div class="job">Manager</div>
-                            </div>
-                            <div class="media-icons">
-                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="fab fa-instagram"></i></a>
-                                <a href="#"><i class="fab fa-youtube"></i></a>
+                    <div class="cards">
+                        <div class="card">
+                            <div class="content">
+                                <div class="img">
+                                    <img src="images/img4.jpg" alt="">
+                                </div>
+                                <div class="details">
+                                    <div class="name">Venkatesh</div>
+                                    <div class="job">Senior Team Leader</div>
+                                </div>
+                                <div class="media-icons">
+                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                    <a href="#"><i class="fab fa-youtube"></i></a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="card">
-                        <div class="content">
-                            <div class="img">
-                                <img src="images/img3.jpg" alt="">
+                        <div class="card">
+                            <div class="content">
+                                <div class="img">
+                                    -<img src="images/img5.jpg" alt="">
+                                </div>
+                                <div class="details">
+                                    <div class="name">Rohit</div>
+                                    <div class="job">Senior Team Leader</div>
+                                </div>
+                                <div class="media-icons">
+                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                    <a href="#"><i class="fab fa-youtube"></i></a>
+                                </div>
                             </div>
-                            <div class="details">
-                                <div class="name">Monu</div>
-                                <div class="job">Senior Team Leader</div>
-                            </div>
-                            <div class="media-icons">
-                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="fab fa-instagram"></i></a>
-                                <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                        <div class="card">
+                            <div class="content">
+                                <div class="img">
+                                    <img src="images/img6.jpeg" alt="">
+                                </div>
+                                <div class="details">
+                                    <div class="name">Muthu Selvam</div>
+                                    <div class="job">Senior Team Leader</div>
+                                </div>
+                                <div class="media-icons">
+                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                    <a href="#"><i class="fab fa-youtube"></i></a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="cards">
-                    <div class="card">
-                        <div class="content">
-                            <div class="img">
-                                <img src="images/img4.jpg" alt="">
-                            </div>
-                            <div class="details">
-                                <div class="name">Venkatesh</div>
-                                <div class="job">Senior Team Leader</div>
-                            </div>
-                            <div class="media-icons">
-                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="fab fa-instagram"></i></a>
-                                <a href="#"><i class="fab fa-youtube"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="content">
-                            <div class="img">
-                                -<img src="images/img5.jpg" alt="">
-                            </div>
-                            <div class="details">
-                                <div class="name">Rohit</div>
-                                <div class="job">Senior Team Leader</div>
-                            </div>
-                            <div class="media-icons">
-                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="fab fa-instagram"></i></a>
-                                <a href="#"><i class="fab fa-youtube"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="content">
-                            <div class="img">
-                                <img src="images/img6.jpeg" alt="">
-                            </div>
-                            <div class="details">
-                                <div class="name">Muthu Selvam</div>
-                                <div class="job">Senior Team Leader</div>
-                            </div>
-                            <div class="media-icons">
-                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="fab fa-instagram"></i></a>
-                                <a href="#"><i class="fab fa-youtube"></i></a>
-                            </div>
-                        </div>
-                    </div>
+                <div class="button">
+                    <label for="one" class=" active one"></label>
+                    <label for="two" class="two"></label>
                 </div>
             </div>
-            <div class="button">
-                <label for="one" class=" active one"></label>
-                <label for="two" class="two"></label>
-            </div>
-        </div>
         </section>
     </section>
 
-<!-- -------------------------------------------------------------------------------------------- -->
+    <!-- -------------------------------------------------------------------------------------------- -->
 
     <!-- LAST SECTION -->
 
-    <div class="last">
+    <!-- <div class="last">
         <div class="last-box">
             <div class="contact">
                 <h3>Contact Us</h3><br>
@@ -627,7 +732,64 @@ body{
                     referrerpolicy="no-referrer-when-downgrade"></iframe></div>
         </div>
         <footer class="footer">The Website was Developed and Designed for Mini Project.</footer>
-    </div>
+    </div> -->
+
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="./img/logo.png" width="7%" alt="">
+            <h4>Contact</h4>
+            <p> <strong> Address:</strong> Renaissance Industrial Smart City, Kalyan-Sape Rd</p>
+            <p> <strong> Phone:</strong> +91 1234567890</p>
+            <p> <strong> Hours:</strong>10:00 - 18:00 MON - SAT </p>
+            <div class="follow">
+                <h4>Follow Us</h4>
+                <div class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-youtube"></i>
+                    <i class="fab fa-pinterest-p"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">About US</a>
+            <a href="#">Contact US</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Delivery Information</a>
+        </div>
+
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign In</a>
+            <a href="#">View Cart</a>
+            <a href="#">My Wishlist</a>
+            <a href="#">Track My Order</a>
+            <a href="#">Help</a>
+        </div>
+
+        <div class="col install">
+            <h4>Install App</h4>
+            <p>From App Store or Google Play</p>
+            <div class="row">
+                <img src="./img/pay/play.jpg" alt="">
+                <img src="./img/pay/app.jpg" alt="">
+
+            </div>
+            <p>Secured Payment Gateways</p>
+            <img src="./img/pay/pay.png" alt="">
+        </div>
+        <div class="copyright">
+            <p>
+                ©1900-2021, All Rights Reserved. by Me
+            </p>
+        </div>
+
+    </footer>
+
 </body>
 
 </html>
