@@ -5,188 +5,629 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/9f455fbf8a.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./style.css">
-    <title>About Us Section</title>
-    <script>
-        
-    </script>
+    <title>About Us</title>
+
+    <script src="https://kit.fontawesome.com/a386cc10f6.js" crossorigin="anonymous"></script>
 </head>
 
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+body{
+    background: linear-gradient(150deg, #fcf2f2 19%, rgba(255, 255, 255, 1) 19%);
+}
+
+    /* HEADER SECTION  */
+
+#about-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 80px;
+    box-shadow: 0 9px 15px rgba(0, 0, 0, 0.07);
+    background: #ece8e5;
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+  }
+
+  #about-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  #about-navbar li {
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+  }
+  
+  #about-navbar li a {
+    text-decoration: none;
+    color: #1a1a1a;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  #about-navbar li a:hover,
+  #about-navbar li a.active {
+    color: #088178;
+  }
+  
+  #about-navbar li a.active::after,
+  #about-navbar li a:hover::after {
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: #088178;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+  }
+
+
+      /* ABOUT SECTION  */
+
+.about-Main{
+    width: 100%;
+    height: 35vh;
+    position: relative;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-content:after{
+    content: '';
+    background: #333;
+    display: block;
+    height: 3px;
+    width: 300px;
+    margin: 10px auto;
+}
+
+.about-content{
+    text-align: center;
+}
+
+.about-content h1{
+    font-size: 100px;
+    font-weight: 400;
+    transition: 0.5s;
+}
+
+.about-content h1:hover{
+    -webkit-text-stroke: 2px rgb(0, 0, 0);
+    color: transparent;
+}
+
+.bg{
+    background: linear-gradient(150deg, rgba(236, 232, 229, 1) 19%, rgba(255, 255, 255, 1) 19%);
+}
+.aboutus{
+    text-align: center;
+    font-size: 50px;
+}
+
+.about-intro{
+    padding: 40px;
+    text-align: center;
+    font-size: 23px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+      /* BOX SECTION  */
+
+.box{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+.mvva{
+    height: 250px;
+    width: 650px;
+    color: black;
+    font-size: 25px;
+    border-radius: 10px;
+    margin: 35px;
+    margin-top: 30px;
+    border-style: inset;
+    border-width: 10px;
+    border-color: gray;
+}
+
+.mvva h3{
+    text-align: center;
+    font-size: 40px;
+    margin-top: 8px;
+}
+
+.mvva p{
+    text-align: center;
+    margin: 15px;
+}
+
+.team{
+    margin: 75px 0;
+}
+
+.team h1{
+    text-align: center;
+    font-weight: bold;
+    font-size: 50px;
+    letter-spacing: 1px;
+    color: #333;
+    padding-bottom: 10px;
+}
+
+.team:after{
+    content: '';
+    background: #333;
+    display: block;
+    height: 3px;
+    width: 150px;
+    margin: 10px auto;
+}
+
+      /* SLIDER SECTION  */
+
+
+.member-slide{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    position: relative;
+  }
+  .member-slide::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    background: #FF676D;
+    clip-path: inset(47% 0 0 0);
+    z-index: -1;
+    height: 100%;
+  }
+  ::selection{
+    background: #FF676D;
+    color: #fff;
+  }
+  .member-container{
+    max-width: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+  .member-container .main-card{
+    display: flex;
+    justify-content: space-evenly;
+    width: 200%;
+    transition: 1s;
+  }
+  #two:checked ~ .main-card{
+    margin-left: -100%;
+  }
+  .member-container .main-card .cards{
+    width: calc(100% / 2 - 10px);
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 20px;
+    justify-content: space-between;
+  }
+  .main-card .cards .card{
+    width: calc(100% / 3 - 10px);
+    background: #fff;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+    transition: all 0.4s ease;
+  }
+  .main-card .cards .card:hover{
+    transform: translateY(-15px);
+  }
+  .cards .card .content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .cards .card .content .img{
+    height: 130px;
+    width: 130px;
+    border-radius: 50%;
+    padding: 3px;
+    background: #FF676D;
+    margin-bottom: 14px;
+  }
+  .card .content .img img{
+    height: 100%;
+    width: 100%;
+    border: 3px solid #ffff;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  .card .content .name{
+    font-size: 20px;
+    font-weight: 500;
+  }
+  .card .content .job{
+    font-size: 20px;
+    color: #FF676D;
+  }
+  .card .content .media-icons{
+    margin-top: 10px;
+    display: flex;
+  
+  }
+  .media-icons a{
+    text-align: center;
+    line-height: 33px;
+    height: 35px;
+    width: 35px;
+    margin: 0 4px;
+    font-size: 14px;
+    color: #FFF;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    background: #FF676D;
+    transition: all 0.3s ease;
+  }
+  .media-icons a:hover{
+    color: #FF676D;
+    background-color: #fff;
+    border-color: #FF676D;
+  }
+   .container .button{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+  }
+  .button label{
+    height: 15px;
+    width: 15px;
+    border-radius: 20px;
+    background: red;
+    margin: 0 4px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+  }
+  .button label.active{
+    width: 35px;
+  }
+  #one:checked ~ .button .one{
+    width: 35px;
+  }
+  #one:checked ~ .button .two{
+    width: 15px;
+  }
+  #two:checked ~ .button .one{
+    width: 15px;
+  }
+  #two:checked ~ .button .two{
+    width: 35px;
+  }
+  input[type="radio"]{
+    display: none;
+  }
+  @media (max-width: 768px) {
+    .main-card .cards .card{
+      margin: 20px 0 10px 0;
+      width: calc(100% / 2 - 10px);
+    }
+  }
+  @media (max-width: 600px) {
+    .main-card .cards .card{
+      width: 100%;
+    }
+  }
+
+      /* LAST SECTION  */
+
+.last{
+    margin-top: 5rem;
+    background-color: rgb(236, 232, 229);
+}
+.last-box{
+    height: 50%;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    background-color: rgb(236, 232, 229);
+}
+
+.contact{
+    background-color: rgb(236, 232, 229);
+    margin-top: 30px;
+    margin-left: 13%;
+}
+
+.contact h3{
+    font-size: 50px;
+    padding-left: 14%;
+    color: black;
+}
+
+.contact i{
+    margin-top: 10px;
+    color: black;
+}
+
+.map{
+    margin-top: 30px;
+    margin-right: 50px;
+}
+
+.footer{
+    font-size: 20px;
+    text-align: center;
+    margin-top: 30px;
+}
+    </style>
 <body>
-    <section id="header">
-        <a href="#"><img src="./img/logo.png" width="7%" class="logo" alt=""></a>
+
+    <!-- HEADER SECTION -->
+
+    <section id="about-header">
+        <a href="#"><img src="/img/logo.png" width="7%" class="logo" alt=""></a>
         <div>
-            <ul id="navbar">
-                <li><a  href="index.html">Home</a></li>
+            <ul id="about-navbar">
+                <li><a href="index.html">Home</a></li>
                 <li><a href="shop.html">Shop</a></li>
                 <li><a href="blog.html">Blog</a></li>
                 <li><a class="active" href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
-				<li><a href="login.html">login</a></li>
-                <li><a  href="cart.html"><i class="fa-sharp fa-solid fa-cart-shopping"></i></a> </li>
-                <a href="#" id="close"><i class="far fa-times"></i></a>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="cart.html"><i class="fa-sharp fa-solid fa-cart-shopping"></i></a> </li>
             </ul>
         </div>
-
-        <div id="mobile">
-            <a href="card.html"><i class="fa-sharp fa-solid fa-cart-shopping"></i></a>
-            <i id="bar" class="fas fa-outdent"></i>
-        </div>
     </section>
-    <div class="section">
-        <div class="container">
-            <div class="content-section">
-                <div class="title">
-                    <h1>About Us</h1>
+
+<!-- ----------------------------------------------------------------------------------------------------- -->
+    <!-- ABOUT US SECTION -->
+
+    <section class="bg">
+        <div class="about-Main">
+            <div class="about-content">
+                <h1>About Us</h1>
+            </div>
+        </div>
+
+        <div class="aboutus">
+            <h3>Welcome to our E-commerce website.</h3>
+        </div>
+
+        <div class="about-intro">
+            <p>we offer a wide range of computers and computer accessories to meet your computing needs. Our website has
+                been designed with you, the customer, in mind, making it easy to navigate and find the products you
+                need.
+                At our store, you will find top-of-the-line computer brands, including Apple, Dell, HP, Lenovo, and
+                more. We
+                offer a variety of desktops, laptops, tablets, and gaming computers, with different specifications and
+                configurations to fit your needs.
+                In addition to computers, we also offer a range of computer accessories, including monitors, keyboards,
+                mice, printers, and scanners. We carry high-quality, reliable products that are designed to enhance your
+                computing experience.
+                Our website is user-friendly and easy to use. You can easily search for products by brand, category, or
+                keyword. We also offer a secure and safe checkout process, ensuring your personal and financial
+                information
+                is protected.
+                We take pride in our excellent customer service, and we are always available to answer any questions or
+                concerns you may have. Our team of experts is available to help you select the best products for your
+                needs
+                and offer technical support if necessary.
+                We offer fast and efficient shipping, so you can receive your products as soon as possible. We also
+                offer a
+                hassle-free return policy, so if you're not satisfied with your purchase, we'll make it right.
+                E-commerce
+                website for your computer needs. We look forward to serving you and helping you find the perfect
+                computer
+                products to fit your needs.</p>
+        </div>
+
+
+<!-- ----------------------------------------------------------------------------------------------------- -->
+
+    <!-- MVVA SECTION -->
+
+        <div class="box">
+            <div class="mvva">
+                <h3>OUR MISSION</h3>
+                <p>We strive to offer our customers the lowest possible prices, the best available
+                    selection, and the utmost convenience. Vision statement: To be Earth's most
+                    customer-centric company, where customers can find and discover anything they might want
+                    to buy online.</p>
+            </div>
+            <div class="mvva">
+                <h3>OUR VISSION</h3>
+                <p>To be Earth's most customer-centric company, where customers can find and discover
+                    anything they might want to buy online.</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="mvva">
+                <h3>OUR VALUE</h3>
+                <p>We work on Values of customer focus, innovation, integrity, collaboration, respect, quality,
+                    excellence.
+                </p>
+            </div>
+            <div class="mvva">
+                <h3>OUR ACHIVEMENT</h3>
+                <p>Flipkart was reported to be at top in the annual Fairwork India Ratings 2021 - which is a 10 point
+                    system
+                    that creates a score based on fair pay, conditions, contracts, management, and representation.</p>
+            </div>
+        </div>
+
+        <section class="team">
+            <div class="team-content">
+                <h1>OUR TEAM</h1>
+            </div>
+        </section>
+
+ <!-- -------------------------------------------------------------------------------------------- -->
+
+    <!-- SLIDER SECTION -->
+
+        <section class="member-slide">
+        <div class="member-container">
+            <input type="radio" name="dot" id="one">
+            <input type="radio" name="dot" id="two">
+            <div class="main-card">
+                <div class="cards">
+                    <div class="card">
+                        <div class="content">
+                            <div class="img">
+                                <img src="images/img1.jpg" alt="">
+                            </div>
+                            <div class="details">
+                                <div class="name">Subham</div>
+                                <div class="job">Head</div>
+                            </div>
+                            <div class="media-icons">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="content">
+                            <div class="img">
+                                <img src="images/img2.jpg" alt="">
+                            </div>
+                            <div class="details">
+                                <div class="name">Arin</div>
+                                <div class="job">Manager</div>
+                            </div>
+                            <div class="media-icons">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="content">
+                            <div class="img">
+                                <img src="images/img3.jpg" alt="">
+                            </div>
+                            <div class="details">
+                                <div class="name">Monu</div>
+                                <div class="job">Senior Team Leader</div>
+                            </div>
+                            <div class="media-icons">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="content">
-                    <input id="ch" type="checkbox">
-                    <h3>Welcome to our E-commerce website.</h3>
-                    <p>where we offer a wide range of computers and computer accessories to meet your computing needs.
-                    </p>
-
-                    <div class="content1">
-                        <p>Our website has been designed with you, the customer, in mind, making it easy to navigate and
-                            find the products you need.
-                            At our store, you will find top-of-the-line computer brands, including Apple, Dell, HP,
-                            Lenovo, and more. We offer a variety of desktops, laptops, tablets, and gaming computers,
-                            with different specifications and configurations to fit your needs.<br>
-
-                            In addition to computers, we also offer a range of computer accessories, including monitors,
-                            keyboards, mice, printers, and scanners. We carry high-quality, reliable products that are
-                            designed to enhance your computing experience.<br>
-
-                            Our website is user-friendly and easy to use. You can easily search for products by brand,
-                            category, or keyword. We also offer a secure and safe checkout process, ensuring your
-                            personal and financial information is protected.<br>
-
-                            We take pride in our excellent customer service, and we are always available to answer any
-                            questions or concerns you may have. Our team of experts is available to help you select the
-                            best products for your needs and offer technical support if necessary.<br>
-
-                            We offer fast and efficient shipping, so you can receive your products as soon as possible.
-                            We also offer a hassle-free return policy, so if you're not satisfied with your purchase,
-                            we'll make it right.</p>
-
-                        <label for="ch">Show less</label>
-                    </div>
-
-                    <label for="ch">Read more</label>
-                </div>
-                <!-- <br><br><br> -->
-
-                <div class="mv-container">
-                    <div class="mv-block">
-                        <div class="image">
-                            <img src="https://www.shutterstock.com/image-photo/hand-interacting-our-mission-business-260nw-1078684292.jpg"
-                                alt="">
-                        </div>
-                        <div class="content3">
-                            <h5>Our Mission</h5>
-                            <p>We strive to offer our customers the lowest possible prices, the best available
-                                selection, and the utmost convenience. Vision statement: To be Earth's most
-                                customer-centric company, where customers can find and discover anything they might want
-                                to buy online.
-                            </p>
+                <div class="cards">
+                    <div class="card">
+                        <div class="content">
+                            <div class="img">
+                                <img src="images/img4.jpg" alt="">
+                            </div>
+                            <div class="details">
+                                <div class="name">Venkatesh</div>
+                                <div class="job">Senior Team Leader</div>
+                            </div>
+                            <div class="media-icons">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-youtube"></i></a>
+                            </div>
                         </div>
                     </div>
-
-                    <div class="mv-block">
-                        <div class="image">
-                            <img src="https://www.viraj.com/wp-content/uploads/2021/11/vision-1.jpg" alt="">
-                        </div>
-                        <div class="content3">
-                            <h5>Our Vision</h5>
-                            <p>To be Earth's most customer-centric company, where customers can find and discover
-                                anything they might want to buy online.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="mv-block">
-                        <div class="image">
-                            <img src="https://www.shutterstock.com/image-illustration/our-values-yellow-light-bulb-260nw-337570034.jpg"
-                                alt="">
-                        </div>
-                        <div class="content3">
-                            <h5>Our Value</h5>
-                            <p>We work on Values of customer focus, innovation, integrity, collaboration, respect, quality, excellence.
-                            </p>
+                    <div class="card">
+                        <div class="content">
+                            <div class="img">
+                                -<img src="images/img5.jpg" alt="">
+                            </div>
+                            <div class="details">
+                                <div class="name">Rohit</div>
+                                <div class="job">Senior Team Leader</div>
+                            </div>
+                            <div class="media-icons">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-youtube"></i></a>
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="social">
-                    <a href=""><i class="fab fa-facebook-f"></i></a>
-                    <a href=""><i class="fab fa-twitter"></i></a>
-                    <a href=""><i class="fab fa-instagram"></i></a>
+                    <div class="card">
+                        <div class="content">
+                            <div class="img">
+                                <img src="images/img6.jpeg" alt="">
+                            </div>
+                            <div class="details">
+                                <div class="name">Muthu Selvam</div>
+                                <div class="job">Senior Team Leader</div>
+                            </div>
+                            <div class="media-icons">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <!-- <div class="image-section">
-                <img src="https://thumbs.dreamstime.com/z/gadgets-accessories-133429004.jpg">
-            </div> -->
+            <div class="button">
+                <label for="one" class=" active one"></label>
+                <label for="two" class="two"></label>
+            </div>
         </div>
+        </section>
+    </section>
+
+<!-- -------------------------------------------------------------------------------------------- -->
+
+    <!-- LAST SECTION -->
+
+    <div class="last">
+        <div class="last-box">
+            <div class="contact">
+                <h3>Contact Us</h3><br>
+
+                <i class="fa-solid fa-phone fa-lg"> 983372294</i><br><br>
+                <i class="fa-solid fa-fax fa-lg"> 9826368258</i><br><br>
+                <i class="fa-brands fa-whatsapp fa-lg"> 983372294</i><br><br>
+                <i class="fa-solid fa-location-dot fa-lg"> A pollo Bandar, Colaba, Mumbai, Maharashtra
+                    400001</i><br><br>
+                <i class="fa-brands fa-facebook fa-lg"> <a
+                        href="https://www.facebook.com/login/">https://www.facebook.com/login/</a></i>
+            </div>
+
+            <div class="map"><iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3774.212543364747!2d72.83207937507241!3d18.92198408225109!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7d1c73a0d5cad%3A0xc70a25a7209c733c!2sGateway%20Of%20India%20Mumbai!5e0!3m2!1sen!2sin!4v1684359018577!5m2!1sen!2sin"
+                    width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+        </div>
+        <footer class="footer">The Website was Developed and Designed for Mini Project.</footer>
     </div>
-    <footer class="section-p1">
-        <div class="col">
-            <img class="logo" src="./img/logo.png" width="7%" alt="">
-            <h4>Contact</h4>
-            <p> <strong> Address:</strong> Renaissance Industrial Smart City, Kalyan-Sape Rd</p>
-            <p> <strong> Phone:</strong> +91 1234567890</p>
-            <p> <strong> Hours:</strong>10:00 - 18:00 MON - SAT </p>
-            <div class="follow">
-                <h4>Follow Us</h4>
-                <div class="icon">
-                    <i class="fab fa-facebook-f"></i>
-                    <i class="fab fa-twitter"></i>
-                    <i class="fab fa-instagram"></i>
-                    <i class="fab fa-youtube"></i>
-                    <i class="fab fa-pinterest-p"></i>
-                </div>
-            </div>
-        </div>
-
-        <div class="col">
-            <h4>About</h4>
-            <a href="#">About US</a>
-            <a href="#">Contact US</a>
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms & Conditions</a>
-            <a href="#">Delivery Information</a>
-        </div>
-
-        <div class="col">
-            <h4>My Account</h4>
-            <a href="#">Sign In</a>
-            <a href="#">View Cart</a>
-            <a href="#">My Wishlist</a>
-            <a href="#">Track My Order</a>
-            <a href="#">Help</a>
-        </div>
-
-        <div class="col install">
-            <h4>Install App</h4>
-            <p>From App Store or Google Play</p>
-            <div class="row">
-                <img src="./img/pay/play.jpg" alt="">
-                <img src="./img/pay/app.jpg" alt="">
-
-            </div>
-            <p>Secured Payment Gateways</p>
-            <img src="./img/pay/pay.png" alt="">
-        </div>
-        <div class="copyright">
-            <p>
-                ©1900-2021, All Rights Reserved. by Me
-            </p>
-        </div>
-
-
-    </footer>
 </body>
 
 </html>

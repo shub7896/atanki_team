@@ -102,7 +102,7 @@ body {
 #navbar li a {
   text-decoration: none;
   color: #1a1a1a;
-  font-size: 16px;
+  font-size: 19px;
   font-weight: 600;
   transition: all 0.3s ease-in-out;
 }
@@ -557,7 +557,7 @@ footer .copyright {
 	}
 } */
 
-@media (max-width: 799px){
+@media (max-width: 720px){
 
   #navbar{
     display: flex;
@@ -621,9 +621,9 @@ footer .copyright {
 }
 }
 
-@media (max-width: 400px){
+@media (max-width: 477px){
   #header{
-    padding: 20px 30px;
+    padding: 20px 35px;
   }
   h1{
     font-size: 32px;
