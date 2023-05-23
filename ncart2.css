@@ -125,7 +125,7 @@ header .shopping span{
 
 }
 .card .checkOut div{
-    background-color: #2a2a2b;
+    background-color: #ffffff;
     width: 70%;
     height: 46px;
     border-radius: 10px;
@@ -140,7 +140,7 @@ header .shopping span{
     color: #fff;
 }
 .card .checkOut div:nth-child(3){
-    background-color: rgb(43, 43, 43);
+    background-color: #ffffff;
     width: 110px;
 }
 .listCard li{
